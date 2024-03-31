@@ -109,7 +109,7 @@ func (server *FtpServer) loadSettings() error {
 	settings, err := server.driver.GetSettings()
 
 	if err != nil || settings == nil {
-		return newDriverError("couldn't load settings", err)
+//		return newDriverError("couldn't load settings", err)
 	}
 
 	if settings.PublicHost != "" {
@@ -174,7 +174,7 @@ func (server *FtpServer) Listen() error {
 		}
 	}
 
-	server.Logger.Info("Listening...", "address", server.listener.Addr())
+//	server.Logger.Info("Listening...", "address", server.listener.Addr())
 
 	return nil
 }
@@ -284,7 +284,7 @@ func (server *FtpServer) ListenAndServe() error {
 		return err
 	}
 
-	server.Logger.Info("Starting...")
+//	server.Logger.Info("Starting...")
 
 	return server.Serve()
 }
